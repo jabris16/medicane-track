@@ -18,12 +18,6 @@ import matplotlib
 #name of ncdf file (fill with appropriate name)
 filename = []
 
-# dimensional constants (fill in with appropriate values)
-
-time_step = []    # number of time-steps in file
-lat_length = []   # latitude dimension
-lon_length = []   # longitude dimension
- 
 # detection criteria constants (fill in with appropriate values) 
 pressure_treshold = []    # pressure gradient of feature point vs. all surrouding cells
 wind_threshold = []    # average wind-speed value used as minimum threshold for detection
