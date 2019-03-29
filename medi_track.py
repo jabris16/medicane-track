@@ -69,8 +69,8 @@ wind_list = []
 for i in xrange(anomaly_shape[0]):
     for j in xrange(1,anomaly_shape[1]-1):    # first and last points excluded to account for boundaries of domain
         for k in xrange(1,anomaly_shape[2]-1):    # first and last points exluded to account for boundaries of domain
-           
-            if anomaly[i,j,k] < 0 and \    # to assess negative gradient feature points only and that feature pointvs adjacent cells gradient exceeds defined pressure gradient threhsold
+            # to assess negative gradient feature points only and that feature pointvs adjacent cells gradient exceeds defined pressure gradient threhsold
+            if anomaly[i,j,k] < 0 and \  
             anomaly[i,j+1,k] - anomaly[i,j,k] > pressure_threshold and \
             anomaly[i,j,k+1] - anomaly[i,j,k] > pressure_threshold and \
             anomaly[i,j-1,k] - anomaly[i,j,k] > pressure_threshold and \
