@@ -79,8 +79,8 @@ for i in xrange(anomaly_shape[0]):
             + wind[i,j,k-1]
             wind_adj_av[i,j,k] = wind_adj_total[i,j,k]/4
             
-            if precip_adj_av[i,j,k] > 40 and \
-            wind_adj_av[i,j,k] > 5:    # identified feature point characteristics which exceed defined thresholds stored in lists before being converted to numpy arrays
+            if precip_adj_av[i,j,k] > precip_threshold and \
+            wind_adj_av[i,j,k] > wind_threshold:    # identified feature point characteristics which exceed defined thresholds stored in lists before being converted to numpy arrays
                 lat_list.append(lat[j])
                 lat_store = np.array(lat_list)
                 lon_list.append(lon[k])
